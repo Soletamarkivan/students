@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="topbarContainer" ></div>
+    <div class="relative mt-16">
+        <div class="w-full h-96 relative rounded-lg overflow-hidden">
+            <img src="../student-portal/assets/img/school1.png" alt="History Banner" class="w-full h-full object-cover rounded-lg" style="filter: blur(8px);">
+            <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-lg"></div>
+        </div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center z-10">
+            <div class="text-6xl">Facilities</div>
+            <p class="text-lg mx-4 my-4">
+                "The Business Administration Building houses all the administrative offices in College including the Office of the Chairman, Office of the School Administrator-Chief Operating Officer, Office of the College Registrar, Office of the Human Resources Department, Admissions Office, Treasury and Accounting Office, Placement and Linkages Office, Office of Student Affairs, Guidance and Testing Center, and the Quality Assurance and Accreditation Office. The building also houses the academic offices of the Dean of the College of Business Administration and Accountancy and Dean of School of Graduate Studies and also Office of the College Student Council and the Editorial Board of Dataline −Official School Publication of Our Lady of Lourdes College. Moreover, this building is one of the areas where activities like symposia and other academic activities are being held as the Audio-Visual Room are also located herein."
+            </p>
+        </div>
+    </div>
+    <div class="bg-white w-auto mx-5 p-10">
+        <div class="section-container">
+            <div class="flex flex-wrap justify-center space-x-5 mt-0 picture-section">
+                <!-- Picture 1 -->
+                <div class="picture-item">
+                    <div class="w-64 h-64 items-center bg-white-500 overflow-hidden rounded-lg">
+                        <img src="../student-portal/assets/img/LATEST-BANNER (1).jpg" alt="History Banner" class="w-full h-full object-cover rounded-lg cursor-pointer" onclick="openModal(this)">
+                    </div>
+                    <div class="text-center text-semibold mt-2">Covered Court Gym</div>
+                </div>
+    
+                <!-- Picture 2 -->
+                <div class="picture-item">
+                    <div class="w-64 h-64 items-center bg-white-500 overflow-hidden rounded-lg">
+                        <img src="../student-portal/assets/img/LATEST1-BANNER.jpg" alt="History Banner" class="w-full h-full object-cover rounded-lg cursor-pointer" onclick="openModal(this)">
+                    </div>
+                    <div class="text-center mt-2">Computer Laboratory</div>
+                </div>
+
+                 <div class="picture-item">
+                    <div class="w-64 h-64 items-center bg-white-500 overflow-hidden rounded-lg">
+                        <img src="../student-portal/assets/img/IMC.jpg" alt="History Banner" class="w-full h-full object-cover rounded-lg cursor-pointer" onclick="openModal(this)">
+                    </div>
+                    <div class="text-center mt-2">IMC</div>
+                </div>
+                <div class="picture-item">
+                    <div class="w-64 h-64 items-center bg-white-500 overflow-hidden rounded-lg">
+                        <img src="../student-portal/assets/img/Classroom.jpg" alt="History Banner" class="w-full h-full object-cover rounded-lg cursor-pointer" onclick="openModal(this)">
+                    </div>
+                    <div class="text-center mt-2">Classroom</div>
+                </div>
+                <div class="picture-item">
+                    <div class="w-64 h-64 items-center bg-white-500 overflow-hidden rounded-lg">
+                        <img src="../student-portal/assets/img/library.jpg" alt="History Banner" class="w-full h-full object-cover rounded-lg cursor-pointer" onclick="openModal(this)">
+                    </div>
+                    <div class="text-center mt-2">Library</div>
+                </div>
+                <div class="picture-item">
+                    <div class="w-64 h-64 items-center bg-white-500 overflow-hidden rounded-lg">
+                        <img src="../student-portal/assets/img/outsidegym.jpg" alt="History Banner" class="w-full h-full object-cover rounded-lg cursor-pointer" onclick="openModal(this)">
+                    </div>
+                    <div class="text-center mt-2">Outside Gym</div>
+                </div>
+                <div class="picture-item">
+                    <div class="w-64 h-64 items-center bg-white-500 overflow-hidden rounded-lg">
+                        <img src="../student-portal/assets/img/sports.jpg" alt="History Banner" class="w-full h-full object-cover rounded-lg cursor-pointer" onclick="openModal(this)">
+                    </div>
+                    <div class="text-center mt-2">Sports Athelete</div>
+                </div>
+                <div class="picture-item">
+                    <div class="w-64 h-64 items-center bg-white-500 overflow-hidden rounded-lg">
+                        <img src="../student-portal/assets/img/LATEST2-BANNER.jpg" alt="History Banner" class="w-full h-full object-cover rounded-lg cursor-pointer" onclick="openModal(this)">
+                    </div>
+                    <div class="text-center mt-2">Kitchen Laboratory</div>
+                </div>
+                
+                
+    
+                <!-- Repeat the pattern for other pictures -->
+    
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 z-50 hidden overflow-auto bg-black bg-opacity-75">
+        <div class="flex items-center justify-center h-full">
+            <div id="modalContent" class="relative max-w-screen-lg max-h-screen">
+                <span class="absolute top-0 right-0 m-4 text-white cursor-pointer" onclick="closeModal()">Close</span>
+                <img id="modalImage" class="w-full h-full object-contain" alt="Enlarged Image">
+            </div>
+        </div>
+    </div>
+    
+    <div id="footerContainer"></div>
+    </div>
+    <script src="../student-portal/assets/js/topbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.11/dist/js/splide.min.js"></script>
+    <script>
+
+        function openModal(img) {
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = img.src;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+    
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Allow scrolling when modal is closed
+        }
+    
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Function to load footer content dynamically
+        function loadFooter() {
+            const footerContainer = document.getElementById('footerContainer');
+            const xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    footerContainer.innerHTML = this.responseText;
+                }
+            };
+
+            xhr.open('GET', './footer.html', true);
+            xhr.send();
+        }
+
+        // Call the function to load footer content
+        loadFooter();
+
+        // The rest of your existing script
+        // ...
+
+        // Example: (you may adjust as needed)
+        // document.getElementById('someElement').addEventListener('click', function() {
+        //     // Your click event handling logic
+        // });
+    });
+</script>
+
+<script src="../student-portal/assets/js/topbar.js"></script>
+ 
+    
+</body>
+</html>

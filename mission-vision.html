@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Mission Vision</title>
+    <link rel="shortcut icon" href="./assets/svg/ollcLogoNoName.svg" type="image/x-icon">
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <div id="topbarContainer"></div>
+    
+    <!-- Image Section -->
+    <div class="relative h-100 flex items-center justify-center">
+        <img src="./assets/img/Mission Banner.jpg" class="w-full h-auto object-cover">
+
+        <!-- Vision and Mission Container Boxes -->
+        <div class="absolute inset-0 flex justify-center items-center p-4">
+
+            <!-- Vision Section -->
+            <div class="container bg-white bg-opacity-75 rounded-lg w-96 h-96">
+                <div class="text-5xl font-bold mb-4 text-center text-blue-800">Vision</div>
+                <div class="text-center text-2xl text-black-800">The vision-mission statement of OLLC expresses its end goal and its broad academic and operational assurances, incorporating a commitment to access and success within the institution's mission statement as well as its vow to its students and community.</div>
+            </div>
+
+            <!-- Mission Section -->
+            <div class="container bg-white bg-opacity-75 rounded-lg w-96 h-96 ml-4">
+                <div class="text-5xl font-bold mb-4 text-center text-blue-800">Mission</div>
+                <div class="text-center text-2xl text-black-800">Build Character, hone skills, nurture talents, and provide the most relevant and highest quality of education by fervently standing for the truth, Commitment, and Excellence</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="mt-auto">
+        <div id="footerContainer"></div>
+    </footer>
+
+    <script src="./assets/js/topbar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to load footer content dynamically
+            function loadFooter() {
+                const footerContainer = document.getElementById('footerContainer');
+                const xhr = new XMLHttpRequest();
+
+                xhr.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        footerContainer.innerHTML = this.responseText;
+                    }
+                };
+
+                xhr.open('GET', './footer.html', true);
+                xhr.send();
+            }
+
+            // Call the function to load footer content
+            loadFooter();
+
+            // The rest of your existing script
+            // ...
+
+            // Example: (you may adjust as needed)
+            // document.getElementById('someElement').addEventListener('click', function() {
+            //     // Your click event handling logic
+            // });
+        });
+    </script>
+</body>
+</html>

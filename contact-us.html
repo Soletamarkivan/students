@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./assets/svg/ollcLogoNoName.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="./assets/js/topbar.js"></script>
+</head>
+<body>
+
+<div id="topbarContainer"></div>
+<div class="bg-cover my-8">
+    <div class="text-center bg-blue-300 bg-cover grid-cols-1 md:grid-cols-2 gap-8 w-full">
+        <h1 class="text-4xl text-center font-bold mb-6 w-full">Contact Us</h1>
+            <h2 class="text-2xl font-bold mb-4">Visit Us</h2>
+            <p class="mb-2">Our School Address:</p>
+            <address class="not-italic mb-4">
+                5031 Gen T De Leon, Valenzuela City
+            </address>
+       
+
+    
+            <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
+            <p class="mb-2">Phone:</p>
+            <p class="mb-4">+6389220077</p>
+
+            <p class="mb-2">Email:</p>
+            <p class="mb-4">ollcval43@gmail.com</p>
+      
+
+    <div class="mt-10 w-full text-center">
+        <h2 class="relative font-bold mb-4">LOCATION OF OUR LADY OF LOURDES COLLEGE</h2>
+    </div>
+        </div>
+        <div>
+        <img src="./assets/img/maps.png" alt="Workplace" usemap="#workmap" class="mx-auto block" width="w-full" height="w-full">
+        
+    </div>
+</div>
+        </div>
+
+<div>
+    <div id="footerContainer"></div>
+     </div>
+     <script src="./assets/js/topbar.js"></script>
+     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to load footer content dynamically
+            function loadFooter() {
+                const footerContainer = document.getElementById('footerContainer');
+                const xhr = new XMLHttpRequest();
+
+                xhr.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        footerContainer.innerHTML = this.responseText;
+                    }
+                };
+
+                xhr.open('GET', './footer.html', true);
+                xhr.send();
+            }
+
+            // Call the function to load footer content
+            loadFooter();
+
+            // The rest of your existing script
+            // ...
+
+            // Example: (you may adjust as needed)
+            // document.getElementById('someElement').addEventListener('click', function() {
+            //     // Your click event handling logic
+            // });
+        });
+    </script>
+    </body>
+    </html>

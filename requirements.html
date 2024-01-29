@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Requirements</title>
+ <link rel="shortcut icon" href="./assets/svg/ollcLogoNoName.svg" type="image/x-icon">
+</head>
+<body>
+ <div id="topbarContainer"></div>
+ <div class="w-full"><img src="./assets/img/requirement-banner.jpg" class="w-full" alt=""></div>
+   <div class="flex items-center justify-center py-4">
+  <div class=" max-w-8xl h-auto bg-blue-200 border-2 border-black rounded-md text-center">
+   <h1 class="text-5xl pb-5">REQUIREMENTS</h1>
+  
+     <p class="font-bold ... text-3xl">Freshmen</p>
+     <p> Original Form 138 / SF9-SHS (learners Progress Report Card)</p>
+     <p> Original Form 137 / SF10 (Learners Permanent Academic Record)</p>
+     <p> Certificate of Good Moral Character signed by the principal or guidance counselor of the last school attended.</p>
+     <p> Two (2) copies of recent, identical photos (2”x2”)</p>
+     <p> ACR for foreign students</p>
+
+     <p class="font-bold ... text-3xl">Transferees</p>
+     <p> Original Form 138 / SF9-SHS (learners Progress Report Card)</p>
+     <p> Certificate of Transfer Credential (Honorable Dismissal)</p>
+     <p> Official Transcript of Records</p>
+     <p> PSA-issued Birth Certificate</p>
+     <p> Certificate of Good Moral Character signed by the principal or guidance counselor of the last school attended.</p>
+     <p> Two (2) copies of recent, identical photos (2”x2”)</p>
+     <p> ACR for foreign students</p>
+   
+     <p class="font-bold ... text-3xl">Re-Enrollees</p>
+       <p> Physical examination</p>
+       <p> Evaluation issued by the Registrar</p>
+       <p> If married, marriage contract</p>
+       <p> Certificate of Good Moral Character from the parish priest or barangay</p>
+
+       <p class="font-bold ... text-3xl">Foreign students</p>
+       <p> Credits earned abroad as certified by CHED</p>
+       <p> Residents foreign must submit a photocopy of their foreign certificate of Registration (ARC)</p>
+       <p class="font-bold ... text-3xl">Cross-Enrollees</p>
+       <p> Submit Cross Registration Permit from previous school (recommending school)</p>
+       <p> One (1) Copy of ID photo (2”x2”)</p>
+       <p> Approval of enrollment for cross-enrollees depends on the careful evaluation of documents by college-authorized personnel and/or the Office of admission and Aid.</p>
+     
+   </ul>
+
+<div>
+ 
+</div>
+    <div class=" max-w-8xl h-auto bg-blue-200 border-2 border-black rounded-md text-center">
+      <p class="font-bold ... text-3xl">New Student</p>
+    
+      
+      <p> Go to apply.ollc.edu. select New. And fill out the application form completely.</p>
+      <p> Pay the downpayment * online or over the counter thru or payment partners.</p>
+      <p> Take a screenshot or a photo of your proof of payment and send it to the OLLC official Facebook messenger for validation as well as your application reference number.</p>
+      <p> Prepare the necessary admission requirement for submission on or before the start of classes.</p>
+   </div>
+</div>
+ </div>
+ <div>
+     <div id="footerContainer"></div>
+ </div>
+ <script src="./assets/js/topbar.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        function loadFooter() {
+            const footerContainer = document.getElementById('footerContainer');
+            const xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    footerContainer.innerHTML = this.responseText;
+                }
+            };
+
+            xhr.open('GET', './footer.html', true);
+            xhr.send();
+        }
+
+        
+        loadFooter();
+
+    });
+</script>
+</body>
+</html>
